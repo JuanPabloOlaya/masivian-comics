@@ -29,4 +29,8 @@ export default {
       commit(types.mutations.SET_LATEST_NUM, data.num);
     }).catch((error) => console.log(error));
   },
+  [types.actions.UPDATE_ACTUAL_COMIC]({ commit, dispatch }, payload) {
+    commit(types.mutations.SET_ACTUAL_COMIC, payload);
+    dispatch(types.actions.ADD_REVIEWED_COMIC, payload);
+  },
 };

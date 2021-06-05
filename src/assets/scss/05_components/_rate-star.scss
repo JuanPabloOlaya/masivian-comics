@@ -1,0 +1,15 @@
+.rate-star {
+  display: flex;
+
+  &__label {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  &__input {
+    display: none;
+  }
+
+  &--selected {
+    color: $yellow;
+  }
+}

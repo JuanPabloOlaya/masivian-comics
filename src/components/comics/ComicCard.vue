@@ -8,14 +8,14 @@
     <div class="card-content">
       <div class="card-image">
         <figure class="image">
-          <img :src="actualComic.img" :alt="actualComic.alt" />
+          <img :src="actualComic.img" :alt="actualComic.alt" :title="actualComic.alt" />
         </figure>
       </div>
       <div class="content">
         {{ actualComic.alt }}
       </div>
       <div class="content is-flex is-justify-content-center">
-        <label>Here will be the rate component</label>
+        <rate-star v-model="comicRate" />
       </div>
     </div>
     <footer class="card-footer">
@@ -27,19 +27,31 @@
 import { mapState, mapActions } from 'vuex';
 import types from '@/store/modules/comics/types';
 import ComicActions from './ComicActions.vue';
+import RateStar from '../common/RateStar.vue';
 
 export default {
   name: 'ComicCard',
   computed: {
     ...mapState(types.PATH, ['actualComic', 'latestNum']),
+    comicRate: {
+      get() {
+        return this.actualComic.rate;
+      },
+      set(val) {
+        const updatedComic = { ...this.actualComic, ...{ rate: val } };
+        this.updateActualComic(updatedComic);
+      },
+    },
   },
   components: {
     ComicActions,
+    RateStar,
   },
   methods: {
     ...mapActions(types.PATH, {
       getComic: types.actions.GET_COMIC,
       getLatestNum: types.actions.GET_LATEST_NUM,
+      updateActualComic: types.actions.UPDATE_ACTUAL_COMIC,
     }),
     getRandomNum() {
       return Math.floor(Math.random() * (this.latestNum - 1 + 1) + 1);
