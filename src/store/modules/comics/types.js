@@ -5,9 +5,9 @@ export default {
   },
   mutations: {
     SET_ACTUAL_COMIC: '@mutations/setActualComic',
-    ADD_REVIEWED_COMIC: '@mutations/addReviewedComic',
-    REMOVE_REVIEWED_COMIC: '@mutations/removeReviewedComic',
+    SET_REVIEWEDS_COMICS: '@mutations/setReviewedComics',
     SET_SORT_TYPE: '@mutations/setSortType',
+    SET_LATEST_NUM: '@mutations/setLatestNum',
   },
   actions: {
     UPDATE_ACTUAL_COMIC: '@actions/updateActualComic',
@@ -15,5 +15,6 @@ export default {
     REMOVE_REVIEWED_COMIC: '@actions/removeReviewedComic',
     UPDATE_SORT_TYPE: '@actions/updateSortType',
     GET_COMIC: '@actions/getComic',
+    GET_LATEST_NUM: '@action/getLatestNum',
   },
 };
