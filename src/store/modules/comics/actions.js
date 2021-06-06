@@ -46,4 +46,13 @@ export default {
   [types.actions.UPDATE_IS_LOADING]({ commit }, payload) {
     commit(types.mutations.SET_IS_LOADING, payload);
   },
+  [types.actions.UPDATE_KEY_WORD]({ commit }, payload) {
+    commit(types.mutations.SET_KEY_WORD, payload);
+  },
+  [types.actions.UPDATE_SORT_TYPE]({ commit, state }, payload) {
+    const { sortMode } = state;
+    const newSortMode = sortMode === 1 ? 0 : 1;
+
+    commit(types.mutations.SET_SORT_TYPE, newSortMode);
+  },
 };

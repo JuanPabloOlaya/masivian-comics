@@ -22,4 +22,9 @@
   &__action {
     cursor: pointer;
   }
+  &__filter-button {
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 18px;
+  }
 }

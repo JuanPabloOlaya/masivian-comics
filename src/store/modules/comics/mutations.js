@@ -13,4 +13,10 @@ export default {
   [types.mutations.SET_IS_LOADING](state, payload) {
     state.isLoading = payload;
   },
+  [types.mutations.SET_KEY_WORD](state, payload) {
+    state.keyWord = payload;
+  },
+  [types.mutations.SET_SORT_TYPE](state, payload) {
+    state.sortMode = payload;
+  },
 };
