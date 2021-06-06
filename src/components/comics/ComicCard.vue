@@ -11,7 +11,7 @@
           <img :src="actualComic.img" :alt="actualComic.alt" :title="actualComic.alt" />
         </figure>
       </div>
-      <div class="content">
+      <div class="content comic-detail__description">
         {{ actualComic.alt }}
       </div>
       <div class="content is-flex is-justify-content-center">
