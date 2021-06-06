@@ -18,12 +18,18 @@
       </div>
     </div>
     <div class="comics-history__actions is-flex is-align-items-center">
-      <i class="mdi mdi-eye-outline comics-history__action" title="Details" />
+      <i
+        class="mdi mdi-eye-outline comics-history__action"
+        title="Details"
+        @click="showComicDetail()"
+      />
       <i class="mdi mdi-trash-can-outline comics-history__action" title="Delete" />
     </div>
   </div>
 </template>
 <script>
+import { mapActions } from 'vuex';
+import types from '@/store/modules/comics/types';
 import RateStar from '../common/RateStar.vue';
 
 export default {
@@ -40,6 +46,15 @@ export default {
       }
 
       return alt;
+    },
+  },
+  methods: {
+    ...mapActions(types.PATH, {
+      getComic: types.actions.GET_COMIC,
+    }),
+    showComicDetail() {
+      this.getComic(this.comic.num);
+      this.$router.push('/');
     },
   },
   props: {

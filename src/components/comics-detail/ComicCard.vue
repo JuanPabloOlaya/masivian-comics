@@ -55,16 +55,8 @@ export default {
   },
   methods: {
     ...mapActions(types.PATH, {
-      getComic: types.actions.GET_COMIC,
-      getLatestNum: types.actions.GET_LATEST_NUM,
       updateActualComic: types.actions.UPDATE_ACTUAL_COMIC,
     }),
-    getRandomNum() {
-      return Math.floor(Math.random() * (this.latestNum - 1 + 1) + 1);
-    },
-  },
-  mounted() {
-    this.getLatestNum().then(() => this.getComic(this.getRandomNum()));
   },
 };
 </script>
