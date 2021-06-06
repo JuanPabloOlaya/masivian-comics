@@ -28,9 +28,10 @@ export default {
   },
   [types.actions.ADD_REVIEWED_COMIC]({ commit, state }, payload) {
     const { reviewedsComics } = state;
-    reviewedsComics[payload.num] = payload;
+    const reviewedsComicsClone = { ...reviewedsComics };
+    reviewedsComicsClone[payload.num] = payload;
 
-    commit(types.mutations.SET_REVIEWEDS_COMICS, reviewedsComics);
+    commit(types.mutations.SET_REVIEWEDS_COMICS, reviewedsComicsClone);
   },
   [types.actions.GET_LATEST_NUM]({ commit }, payload) {
     ComicApi.getLatestComic().then((response) => {

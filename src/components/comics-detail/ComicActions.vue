@@ -1,5 +1,5 @@
 <template>
-  <div class="field has-addons is-flex-grow-1">
+  <div class="field has-addons is-flex-grow-1 mb-0">
     <p class="control is-flex-grow-1 is-flex">
       <button
         class="button is-flex-grow-1"

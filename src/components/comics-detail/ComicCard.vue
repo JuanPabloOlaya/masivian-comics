@@ -18,8 +18,14 @@
         <rate-star v-model="comicRate" />
       </div>
     </div>
-    <footer class="card-footer">
+    <footer class="card-footer is-flex is-flex-direction-column">
       <comic-actions />
+      <button
+        @click="$router.push('/comics-history')"
+        class="button"
+      >
+        Go to the history
+      </button>
     </footer>
   </div>
 </template>

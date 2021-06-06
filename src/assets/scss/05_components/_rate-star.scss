@@ -3,7 +3,6 @@
 
   &__label {
     cursor: pointer;
-    font-size: 24px;
   }
   &__input {
     display: none;
@@ -11,5 +10,11 @@
 
   &--selected {
     color: $yellow;
+  }
+  &--size-normal {
+    font-size: 24px;
+  }
+  &--size-small {
+    font-size: 16px;
   }
 }

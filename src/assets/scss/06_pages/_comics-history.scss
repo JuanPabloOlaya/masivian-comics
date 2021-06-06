@@ -1,6 +1,25 @@
 .comics-history {
+  overflow: hidden;
   &__title {
     font-size: 2rem;
     font-weight: 500;
+  }
+  &__image-container {
+    overflow: hidden;
+  }
+  &__image {
+    height: 100% !important;
+  }
+  &__list {
+    overflow-y: auto;
+  }
+  &__description {
+    font-size: 12px;
+  }
+  &__actions {
+    font-size: 24px;
+  }
+  &__action {
+    cursor: pointer;
   }
 }

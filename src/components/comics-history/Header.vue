@@ -4,6 +4,7 @@
       comics-history__header
       is-flex is-justify-content-space-between
       is-align-items-center
+      pb-2
     "
   >
     <h1 class="comics-history__title">
