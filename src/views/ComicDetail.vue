@@ -20,7 +20,7 @@
 <script>
 import { mapState } from 'vuex';
 import types from '@/store/modules/comics/types';
-import ComicCard from '@/components/comics/ComicCard.vue';
+import ComicCard from '@/components/comics-detail/ComicCard.vue';
 import Loader from '@/components/common/Loader.vue';
 
 export default {
