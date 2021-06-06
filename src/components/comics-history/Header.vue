@@ -8,7 +8,7 @@
     "
   >
     <div class="tile is-12">
-      <button class="button" @click="$router.push('/')">Regresar</button>
+      <button class="button" @click="$router.push('/')">Go back</button>
     </div>
     <div class="tile is-12 is-justify-content-space-between is-align-items-center">
       <h1 class="comics-history__title">

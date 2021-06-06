@@ -33,6 +33,13 @@ export default {
 
     commit(types.mutations.SET_REVIEWEDS_COMICS, reviewedsComicsClone);
   },
+  [types.actions.REMOVE_REVIEWED_COMIC]({ commit, state }, payload) {
+    const { reviewedsComics } = state;
+    const reviewedsComicsClone = { ...reviewedsComics };
+    delete reviewedsComicsClone[payload];
+
+    commit(types.mutations.SET_REVIEWEDS_COMICS, reviewedsComicsClone);
+  },
   [types.actions.GET_LATEST_NUM]({ commit }, payload) {
     ComicApi.getLatestComic().then((response) => {
       const { data } = response;

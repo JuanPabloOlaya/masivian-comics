@@ -23,7 +23,11 @@
         title="Details"
         @click="showComicDetail()"
       />
-      <i class="mdi mdi-trash-can-outline comics-history__action" title="Delete" />
+      <i
+        class="mdi mdi-trash-can-outline comics-history__action"
+        title="Delete"
+        @click="deleteComic(comic.num)"
+      />
     </div>
   </div>
 </template>
@@ -51,6 +55,7 @@ export default {
   methods: {
     ...mapActions(types.PATH, {
       getComic: types.actions.GET_COMIC,
+      deleteComic: types.actions.REMOVE_REVIEWED_COMIC,
     }),
     showComicDetail() {
       this.getComic(this.comic.num);
