@@ -10,4 +10,7 @@ export default {
   [types.mutations.SET_LATEST_NUM](state, payload) {
     state.latestNum = payload;
   },
+  [types.mutations.SET_IS_LOADING](state, payload) {
+    state.isLoading = payload;
+  },
 };

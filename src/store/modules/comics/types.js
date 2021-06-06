@@ -8,6 +8,7 @@ export default {
     SET_REVIEWEDS_COMICS: '@mutations/setReviewedComics',
     SET_SORT_TYPE: '@mutations/setSortType',
     SET_LATEST_NUM: '@mutations/setLatestNum',
+    SET_IS_LOADING: '@mutations/setIsLoading',
   },
   actions: {
     UPDATE_ACTUAL_COMIC: '@actions/updateActualComic',
@@ -15,6 +16,7 @@ export default {
     REMOVE_REVIEWED_COMIC: '@actions/removeReviewedComic',
     UPDATE_SORT_TYPE: '@actions/updateSortType',
     GET_COMIC: '@actions/getComic',
-    GET_LATEST_NUM: '@action/getLatestNum',
+    GET_LATEST_NUM: '@actions/getLatestNum',
+    UPDATE_IS_LOADING: '@actions/updateIsLoading',
   },
 };

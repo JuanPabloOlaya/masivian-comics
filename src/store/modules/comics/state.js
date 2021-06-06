@@ -16,4 +16,5 @@ export default {
   reviewedsComics: {},
   keyWord: '',
   sortMode: 1,
+  isLoading: false,
 };

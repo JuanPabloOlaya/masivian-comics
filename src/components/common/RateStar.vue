@@ -134,6 +134,11 @@ export default {
   data: () => ({
     hoveredValue: 0,
   }),
+  watch: {
+    value(newVal) {
+      this.hoveredValue = newVal;
+    },
+  },
   methods: {
     updateValue(event) {
       const { value } = event.target;
