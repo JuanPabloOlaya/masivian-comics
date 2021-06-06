@@ -7,8 +7,7 @@
       is-align-items-center
       is-justify-content-center
       is-flex-grow-1 columns
-      pt-5
-      pb-5
+      pt-3
     "
   >
     <div class="column is-5 comic-detail__column">
