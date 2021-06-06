@@ -1,7 +1,12 @@
 <template>
   <div class="card p-2 is-flex mb-2">
     <figure class="image comics-history__image-container is-64x64">
-      <img :src="comic.img" class="comics-history__image" :title="comic.img" :alt="comic.img">
+      <img
+        :src="comic.img"
+        class="comics-history__image"
+        :title="comic.safe_title"
+        :alt="shortDescription"
+      >
     </figure>
     <div class="comics-history__comic-info pl-1 is-flex-grow-1">
       <div class="comics-history__top-info tile">
@@ -9,7 +14,7 @@
         <rate-star v-model="comic.rate" readonly size="small" />
       </div>
       <div class="comics-history__bottom-info">
-        <p class="comics-history__description">{{comic.alt}}</p>
+        <p class="comics-history__description">{{shortDescription}}</p>
       </div>
     </div>
     <div class="comics-history__actions is-flex is-align-items-center">
@@ -25,6 +30,17 @@ export default {
   name: 'ComicListItem',
   components: {
     RateStar,
+  },
+  computed: {
+    shortDescription() {
+      const { alt } = this.comic;
+
+      if (alt.length > 300) {
+        return `${alt.substring(0, 299)}...`;
+      }
+
+      return alt;
+    },
   },
   props: {
     comic: {

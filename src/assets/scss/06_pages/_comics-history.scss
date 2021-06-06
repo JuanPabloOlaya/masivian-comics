@@ -6,15 +6,18 @@
   }
   &__image-container {
     overflow: hidden;
+    min-width: 64px;
   }
   &__image {
     height: 100% !important;
+    min-width: 64px;
   }
   &__list {
     overflow-y: auto;
   }
   &__description {
     font-size: 12px;
+    font-style: italic;
   }
   &__actions {
     font-size: 24px;
