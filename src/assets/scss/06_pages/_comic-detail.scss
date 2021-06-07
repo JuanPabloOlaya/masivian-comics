@@ -1,0 +1,12 @@
+.comic-detail {
+  overflow: auto;
+  max-height: 100%;
+  &__column {
+    position: relative;
+    max-height: 100%;
+  }
+  &__description {
+    font-size: 12px;
+    font-style: italic;
+  }
+}

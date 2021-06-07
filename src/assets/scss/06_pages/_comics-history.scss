@@ -1,0 +1,33 @@
+.comics-history {
+  overflow: hidden;
+  &__title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  &__image-container {
+    overflow: hidden;
+    min-width: 64px;
+  }
+  &__image {
+    height: 100% !important;
+    min-width: 64px;
+  }
+  &__list {
+    overflow-y: auto;
+  }
+  &__description {
+    font-size: 12px;
+    font-style: italic;
+  }
+  &__actions {
+    font-size: 24px;
+  }
+  &__action {
+    cursor: pointer;
+  }
+  &__filter-button {
+    max-width: 40px;
+    max-height: 40px;
+    font-size: 18px;
+  }
+}
